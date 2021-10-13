@@ -1,12 +1,15 @@
 //6_4
 #include <iostream>
 using namespace std;
-void ModifyArray(int Temp[]);
+void ModifyArray(char Temp[]);
 void ModifyElement(int Temp);
 
 int main()
 {
-    int Data[] = {1, 2, 3, 4, 5};
+    char Data[5];
+    for(int i = 0; i < 5; i++){
+        cin >> Data[i];
+    }
     cout << "Effects of passing entrie array pass-by-reference.\n";
     cout << "Original array's value : ";
     for (int i = 0; i < 5; i++)
@@ -14,8 +17,9 @@ int main()
     cout << endl;
     ModifyArray(Data); // array is passed pass-by-reference
     cout << "Modified array's value : ";
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 5; i++){
         cout << Data[i] << "  ";
+    }
     cout << endl
          << endl;
     cout << "Effects of passing array element pass-by-value.\n";
@@ -29,10 +33,16 @@ int main()
     return (0);
 }
 
-void ModifyArray(int Temp[])
+void ModifyArray(char Temp[])
 {
-    for (int j = 0; j < 5; j++){
-        Temp[j] *= 2;
+    char p;
+    int i,j;
+    j=i-1;
+    for(i=0;i<j;i++){
+        p=Temp[i];
+        Temp[i]=Temp[j];
+        Temp[j]=p;
+        j--;
     }
 }
 
