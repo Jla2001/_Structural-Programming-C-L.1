@@ -3,7 +3,6 @@
 using namespace std;
 
 int main(){
-    int a = 452;
-    cout << a % 1000;
+int num = 0 ; while(num <= 0){ num++ ; cout << num-- ; }
     return(0);
 }
