@@ -11,7 +11,7 @@ int main(){
     Votes = rand()%500;
     pvotes = (Votes / student)*100;
     pnvotes = ((500-Votes) / student)*100;
-    cout << Votes <<endl <<"Number of Votes : " << pvotes <<"%" <<endl << "Number of not Votes : "<< pnvotes <<"%";
+    cout <<"Number of Votes : " <<Votes<<" = "<< pvotes <<"%" <<endl << "Number of not Votes : "<< student-Votes<<" = "<< pnvotes <<"%";
     cout <<"\n\nResult of election chairman\n";
     cout <<"------------------------------------------"<<endl;
     cout <<"NO.     " << "Votes     " << "Percent(%)" <<endl;
@@ -25,13 +25,13 @@ int main(){
             Votes = Votes - point;
             ppoint = (point/setVotes)*100;
             cout << i+1 <<".      ";
-            cout << fixed << setprecision(0) << point <<"       ";
+            cout << fixed << setprecision(0) << point <<"         ";
             cout << fixed << setprecision(2) << ppoint <<endl;
         }else{
             point = Votes;
             ppoint = (Votes/setVotes)*100;
             cout << i+1 <<".      ";
-            cout << fixed << setprecision(0) << point <<"       ";
+            cout << fixed << setprecision(0) << point <<"         ";
             cout << fixed << setprecision(2) << ppoint <<endl;
         }
         lpoint += point;
