@@ -15,7 +15,7 @@ int main()
     for (int i = 0; i < 5; i++)
         cout << Data[i] << "  ";
     cout << endl;
-    ModifyArray(Data); // array is passed pass-by-reference
+    ModifyArray(Data);
     cout << "Modified array's value : ";
     for (int i = 0; i < 5; i++){
         cout << Data[i] << "  ";
@@ -25,7 +25,7 @@ int main()
     cout << "Effects of passing array element pass-by-value.\n";
     cout << "Data[3] before modify element : ";
     cout << Data[3] << endl;
-    ModifyElement(Data[3]); // array element is passed pass-by-value
+    ModifyElement(Data[3]);
     cout << "Data[3] after modify element : ";
     cout << Data[3] << endl
          << endl;
